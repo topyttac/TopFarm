@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="36dp"
+    android:background="@drawable/background_rec_gadiant_blue_orange"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9">
+
+        <LinearLayout
+            android:id="@+id/ll_setting_plant"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="ตั้งค่า"
+                android:textColor="#9C27B0"
+                android:textSize="32sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_solution_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toLeftOf="@+id/iv_solution_icon"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="1) กรุณาเลือกวิธีปลูก "
+            android:textColor="#9C27B0"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/iv_solution_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/solution_icon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_rice_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_toLeftOf="@+id/iv_rice_icon"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="2) กรุณาเลือกสายพันธุ์"
+            android:textColor="#9C27B0"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/iv_rice_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="32dp"
+            android:src="@drawable/rice_icon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4">
+
+        <io.feeeei.circleseekbar.CircleSeekBar
+            android:id="@+id/seekDay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            app:wheel_reached_color="#EC407A" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="8">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="6">
+
+                <io.feeeei.circleseekbar.CircleSeekBar
+                    android:id="@+id/seekMonth"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    app:wheel_reached_color="#FFD54F" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="8">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2">
+
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/summer" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image_weather"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image_plant"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/ll_selected_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_selectedDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="36dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_separate_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textSize="36dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_selectedMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="36dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textSize="36dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/calendar_purple" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.6"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/fl_show_circular"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_rec_tran_gray">
+
+            <ImageView
+                android:id="@+id/iv_show_circular"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:padding="8dp"
+                android:src="@drawable/circular_gray" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_show_timeline"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_rec_tran_gray">
+
+            <ImageView
+                android:id="@+id/iv_show_timeline"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:padding="8dp"
+                android:src="@drawable/timeline_gray" />
+
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>
