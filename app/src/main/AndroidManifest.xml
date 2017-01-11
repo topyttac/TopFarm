@@ -12,17 +12,21 @@
         <activity
             android:name=".activity.MainActivity"
             android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/AppThemeWithActionBar" />
         <activity
             android:name=".activity.TimelineActivity"
             android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/AppThemeWithActionBar" />
         <activity
             android:name=".activity.CircularActivity"
             android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/AppThemeWithActionBar" />
         <activity
             android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,6 +36,7 @@
         </activity>
         <activity
             android:name=".activity.TutorialActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/Transparent" />
         <activity android:name=".activity.TutorialResultActivity"></activity>
     </application>
