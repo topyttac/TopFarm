@@ -73,9 +73,8 @@ public class MainActivity extends AppCompatActivity implements MainFragment.Main
             case R.id.menu_credit:
                 new MaterialDialog.Builder(this)
                         .typeface("Mitr-Regular.ttf", "Mitr-Regular.ttf")
-                        .title("ขอขอบคุณ")
-                        .content(Html.fromHtml("\t \t ร้านชัยเจริญ (เมล็ดพันธุ์ข้าว เฮียใช้)" + "<br>"
-                                + "\t \t \t http://www.flaticon.com"))
+                        .title("ที่มาของแนวความคิด")
+                        .content(Html.fromHtml("ปฏิทินล้นเกวียน <br><br> โดย <br><br> เฮียใช้ จากศูนย์เรียนรู้วิถีชีวิตและจิตวิญญาณชาวนาไทย <br> จังหวัดสุพรรณบุรี"))
                         .positiveText("ตกลง")
                         .show();
                 return true;
